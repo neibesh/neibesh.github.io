@@ -1,0 +1,30 @@
+.block {
+	padding: 8px;
+	background: linear-gradient(
+		0deg,
+		rgba(245, 245, 245, 1) 0%,
+		rgba(245, 245, 245, 0) 34%,
+		rgba(245, 245, 245, 0) 100%
+	);
+
+	p {
+		font-size: 1.8em;
+		font-weight: 600;
+		color: #616161;
+	}
+}
+
+.copyright {
+	padding: 16px;
+	text-align: center;
+	font-size: 0.8em;
+	color: #616161;
+}
+
+@media only screen and (max-width: 800px) {
+	.block {
+		p {
+			font-size: 1.2em;
+		}
+	}
+}

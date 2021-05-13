@@ -1,0 +1,12 @@
+.wrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+
+	.capping {
+		position: relative;
+		width: 100%;
+		max-width: 920px;
+	}
+}
