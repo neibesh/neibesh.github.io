@@ -24,8 +24,13 @@ import ARANGO_LOGO from "./img/arango.png";
 import CUST_LOGO from "./img/cust.png";
 import COMMS_LOGO from "./img/comms.png";
 import PM_LOGO from "./img/pm.png";
-import CIDI_LOGO from "./img/cidi.png";
+import CICD_LOGO from "./img/cicd.png";
 import ARCH_LOGO from "./img/arch.png";
+import GCP_LOGO from "./img/gcp.png";
+import SPRING_LOGO from "./img/spring.png";
+import CCDB_LOGO from "./img/ccdb.png";
+import KAFKA_LOGO from "./img/kafka.png";
+import KUBE_LOGO from "./img/kube.png";
 
 export interface Experience {
 	icon: string;
@@ -97,9 +102,9 @@ export const EXPERIENCES: { [key: string]: Experience } = {
 		icon: JIRA_LOGO,
 		name: "Jira",
 	},
-	CIDI: {
-		icon: CIDI_LOGO,
-		name: "CI/DI",
+	CICD: {
+		icon: CICD_LOGO,
+		name: "CI/CD",
 	},
 	AGILE: {
 		icon: AGILE_LOGO,
@@ -152,5 +157,25 @@ export const EXPERIENCES: { [key: string]: Experience } = {
 	REDIS: {
 		icon: REDIS_LOGO,
 		name: "Redis",
+	},
+	GCP: {
+		icon: GCP_LOGO,
+		name: "Google Cloud",
+	},
+	SPRING: {
+		icon: SPRING_LOGO,
+		name: "Spring Boot",
+	},
+	CCDB: {
+		icon: CCDB_LOGO,
+		name: "Cockroach DB",
+	},
+	KAFKA: {
+		icon: KAFKA_LOGO,
+		name: "Apache Kafka",
+	},
+	KUBE: {
+		icon: KUBE_LOGO,
+		name: "Kubernetes",
 	},
 };

@@ -6,6 +6,7 @@ import TMS_LOGO from "./img/tms.png";
 import APPLE_LOGO from "./img/apple.png";
 import CURTIN_LOGO from "./img/curtin.png";
 import HIVE9_LOGO from "./img/hive9.png";
+import POWR_LOGO from "./img/powr.png";
 import PF_IMAGE from "./img/pf.png";
 import "./home.module.scss";
 import { Milestone } from "./components/milestone";
@@ -18,8 +19,32 @@ function Home() {
 			<Block>
 				<Header>Employment</Header>
 				<Milestone
+				icon={POWR_LOGO}
+					pre="2021 - Present"
+					name="Power Ledger"
+					sub="Software Engineer"
+					experiences={[
+						EXPERIENCES.REACT_WEB,
+						EXPERIENCES.TYPESCRIPT,
+						EXPERIENCES.GCP,
+						EXPERIENCES.AWS,
+						EXPERIENCES.JAVA,
+						EXPERIENCES.SPRING,
+						EXPERIENCES.WEB,
+						EXPERIENCES.ARCHITECTURE,
+						EXPERIENCES.CCDB,
+						EXPERIENCES.KAFKA,
+						EXPERIENCES.KUBE,
+						EXPERIENCES.CICD,
+						EXPERIENCES.GITHUB,
+						EXPERIENCES.JIRA,
+						EXPERIENCES.AGILE,
+						EXPERIENCES.PG,
+					]}
+				/>
+				<Milestone
 				icon={HIVE9_LOGO}
-					pre="2018 - Present"
+					pre="2018 - 2021"
 					name="Hive 9 Systems / EXTAG"
 					sub="Software Engineer"
 					experiences={[
@@ -35,7 +60,7 @@ function Home() {
 						EXPERIENCES.GITHUB,
 						EXPERIENCES.PM,
 						EXPERIENCES.JIRA,
-						EXPERIENCES.CIDI,
+						EXPERIENCES.CICD,
 						EXPERIENCES.LINUX,
 						EXPERIENCES.AGILE,
 						EXPERIENCES.MYSQL,
