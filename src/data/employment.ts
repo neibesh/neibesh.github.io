@@ -4,13 +4,32 @@ import POWR_LOGO from "../images/comp/powr.png";
 import HIVE9_LOGO from "../images/comp/hive9.png";
 import TMS_LOGO from "../images/comp/tms.png";
 import APPLE_LOGO from "../images/comp/apple.png";
+import CANVA_LOGO from "../images/comp/canva.jpg";
 
 export const EMPLOYMENT_DATA: SkilledEvent[] = [
+	{
+		id: "canva",
+		name: "Canva",
+		description: "Senior Software Engineer",
+		dates: "2023 - Present",
+		icon: CANVA_LOGO,
+		skills: [
+			SKILLS.REACT_WEB,
+			SKILLS.TYPESCRIPT,
+			SKILLS.AWS,
+			SKILLS.JAVA,
+			SKILLS.WEB,
+			SKILLS.CICD,
+			SKILLS.GITHUB,
+			SKILLS.JIRA,
+			SKILLS.AGILE,
+		],
+	},
 	{
 		id: "pl",
 		name: "PowerLedger",
 		description: "Software Engineer",
-		dates: "2021 - Present",
+		dates: "2021 - 2023",
 		icon: POWR_LOGO,
 		skills: [
 			SKILLS.REACT_WEB,
