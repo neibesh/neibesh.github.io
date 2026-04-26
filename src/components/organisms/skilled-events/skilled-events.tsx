@@ -1,11 +1,13 @@
-import { SkilledEvent } from "../../../types/types";
+import type { SkilledEvent } from "../../../types/types";
 import { Box, Header2, Header4, Header5, Image } from "../../atoms";
 import { SkillChip } from "../../molecules";
 
-export const SkilledEvents: React.FC<{
+export type SkilledEventsProps = {
 	name: string;
 	events: SkilledEvent[];
-}> = ({ name, events }) => {
+};
+
+export function SkilledEvents({ name, events }: SkilledEventsProps) {
 	return (
 		<Box
 			px="2"
@@ -16,49 +18,57 @@ export const SkilledEvents: React.FC<{
 		>
 			<Box width="100%" maxWidth="920px">
 				<Header2>{name}</Header2>
-				{events.map((skill) => (
-					<SkillBlock key={skill.id} skill={skill} />
+				{events.map((event) => (
+					<SkillBlock key={event.id} event={event} />
 				))}
 			</Box>
 		</Box>
 	);
+}
+
+type SkillBlockProps = {
+	event: SkilledEvent;
 };
 
-const SkillBlock: React.FC<{ skill: SkilledEvent }> = ({
-	skill: { icon, dates, name, description, skills },
-}) => (
-	<Box my="8">
-		<Box flexDirection={["column", "row"]}>
-			<Box alignItems={["center"]}>
-				<Image
-					height="8"
-					width="8"
-					bg="white"
-					borderRadius="48px"
-					border="4px solid #fff"
-					boxShadow="rgba(99, 99, 99, 0.2) 0px 2px 8px 0px"
-					mb={["6"]}
-					src={icon}
-				/>
-			</Box>
-			<Box pl={[0, "4"]}>
-				<Box pl={[0, "4"]}>
-					<Header5 textAlign={["center", "left"]}>{dates}</Header5>
-					<Header2 textAlign={["center", "left"]}>{name}</Header2>
-					<Header4 textAlign={["center", "left"]}>{description}</Header4>
+function SkillBlock({ event }: SkillBlockProps) {
+	const { icon, dates, name, description, skills } = event;
+
+	return (
+		<Box my="8">
+			<Box flexDirection={["column", "row"]}>
+				<Box alignItems={["center"]}>
+					<Image
+						height="8"
+						width="8"
+						bg="white"
+						borderRadius="48px"
+						border="4px solid #fff"
+						boxShadow="rgba(99, 99, 99, 0.2) 0px 2px 8px 0px"
+						mb={["6"]}
+						src={icon}
+					/>
 				</Box>
-				<Box
-					flexDirection="row"
-					width="100%"
-					flexWrap="wrap"
-					justifyContent={["center", "flex-start"]}
-					pt={["6"]}
-				>
-					{skills.map((skill) => (
-						<SkillChip key={skill.id} skill={skill} />
-					))}
+				<Box pl={[0, "4"]}>
+					<Box pl={[0, "4"]}>
+						<Header5 textAlign={["center", "left"]}>{dates}</Header5>
+						<Header2 textAlign={["center", "left"]}>{name}</Header2>
+						{description ? (
+							<Header4 textAlign={["center", "left"]}>{description}</Header4>
+						) : null}
+					</Box>
+					<Box
+						flexDirection="row"
+						width="100%"
+						flexWrap="wrap"
+						justifyContent={["center", "flex-start"]}
+						pt={["6"]}
+					>
+						{skills.map((skill) => (
+							<SkillChip key={skill.id} skill={skill} />
+						))}
+					</Box>
 				</Box>
 			</Box>
 		</Box>
-	</Box>
-);
+	);
+}

@@ -1,4 +1,4 @@
-import { SkilledEvent } from "../types/types";
+import type { SkilledEvent } from "../types/types";
 import { SKILLS } from "./skills";
 import POWR_LOGO from "../images/comp/powr.png";
 import HIVE9_LOGO from "../images/comp/hive9.png";

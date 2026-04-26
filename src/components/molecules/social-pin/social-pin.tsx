@@ -1,11 +1,13 @@
-import { ReactNode } from "react";
+import type { ReactNode } from "react";
 import { Button } from "../../atoms";
 
-export const SocialPin: React.FC<{
+export type SocialPinProps = {
 	icon: ReactNode;
 	name: string;
 	url: string;
-}> = ({ name, url, icon }) => {
+};
+
+export function SocialPin({ name, url, icon }: SocialPinProps) {
 	return (
 		<Button
 			mx={["1", "4"]}
@@ -18,4 +20,4 @@ export const SocialPin: React.FC<{
 			{name}
 		</Button>
 	);
-};
+}

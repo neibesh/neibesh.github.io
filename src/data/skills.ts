@@ -1,4 +1,4 @@
-import { Skill } from "../types/types";
+import type { Skill } from "../types/types";
 
 import REACT_LOGO from "../images/chips/react.png";
 import AWS_LOGO from "../images/chips/aws.png";
@@ -34,7 +34,7 @@ import CCDB_LOGO from "../images/chips/ccdb.png";
 import KAFKA_LOGO from "../images/chips/kafka.png";
 import KUBE_LOGO from "../images/chips/kube.png";
 
-export const SKILLS: { [name: string]: Skill } = {
+export const SKILLS = {
 	REACT_WEB: {
 		id: "react-web",
 		icon: REACT_LOGO,
@@ -210,4 +210,4 @@ export const SKILLS: { [name: string]: Skill } = {
 		icon: KUBE_LOGO,
 		name: "Kubernetes",
 	},
-};
+} satisfies Record<string, Skill>;
