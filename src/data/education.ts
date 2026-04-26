@@ -1,4 +1,4 @@
-import { SkilledEvent } from "../types/types";
+import type { SkilledEvent } from "../types/types";
 import { SKILLS } from "./skills";
 import CURTIN_LOGO from "../images/comp/curtin.png";
 

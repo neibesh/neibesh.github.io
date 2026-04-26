@@ -1,6 +1,11 @@
+import type { ReactNode } from "react";
 import { ThemeProvider } from "styled-components";
 import { APP_THEME } from "../theme";
 
-export const AppProviders: React.FC<{ children?: React.ReactNode }> = ({
-	children,
-}) => <ThemeProvider theme={APP_THEME}>{children}</ThemeProvider>;
+export type AppProvidersProps = {
+	children?: ReactNode;
+};
+
+export function AppProviders({ children }: AppProvidersProps) {
+	return <ThemeProvider theme={APP_THEME}>{children}</ThemeProvider>;
+}
